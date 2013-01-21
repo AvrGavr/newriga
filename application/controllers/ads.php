@@ -16,6 +16,7 @@ class Ads extends CI_Controller {
 			$data['cats'] = $cats;
 			$this->load->helper('url');
 			$data['catsurl'] = site_url('ads/category');
+			$data['moreurl'] = site_url('ads/more');
 			$query = $this->DB_model->getData('news');
 			for ($i = 0; $i < count($query); $i++) {
 				$news[$query[$i]->header] = $query[$i]->article;
@@ -58,6 +59,34 @@ class Ads extends CI_Controller {
 			$data['news_date'] = $news_date;
             $this->load->view('Main_view',$data);   
 	
+	}
+	
+	function more($id) {
+		$this->load->model('DB_model'); 
+			$this->load->model('Menu_model');
+			$this->Menu_model->getMenu();
+			$data['now_page'] = 3;
+			$data['page_name'] = 'article_section';
+			$data['menu'] = $this->Menu_model->getMenu();
+		$query = $this->DB_model->getData('news');
+			for ($i = 0; $i < count($query); $i++) {
+				$news[$query[$i]->header] = $query[$i]->article;
+				$news_id[$query[$i]->header] = $query[$i]->id;	
+				$news_date[$query[$i]->header] = $query[$i]->date;
+				
+				}
+			
+			$query = $this->DB_model->getData('ads');
+			for ($i = 0; $i < count($query); $i++) {
+				if ($query[$i]->id == $id) 
+					$article = array($query[$i]->header => $query[$i]->article); 
+				}			
+			$data['article'] = $article;
+			$data['news'] = $news;
+			$data['news_id'] = $news_id; 
+			$data['news_date'] = $news_date;
+            $this->load->view('Main_view',$data);   
+		
 	}
 	
 }
