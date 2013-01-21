@@ -4,7 +4,7 @@
     <title>Новая Рига</title>
     <meta http-equiv="content-type" content="text/html; charset=Windows-1251"/>
     <meta http-equiv="imagetoolbar" content="no"/>
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="http://localhost/css/style.css" type="text/css" rel="stylesheet">
 <!--[if IE 6]>
     <link href="O_Portal_files/axurerp_pagespecificstyles_ie6.css" type="text/css" rel="stylesheet">
 <![endif]-->
@@ -26,16 +26,8 @@
 		</div>
 	</div>
 </div>
-<div class="menu">
-  <ul class="menu-items">
-    <li><a href="#">Новорижское Шоссе</a></li>
-    <li><a href="#">Новости</a></li>
-    <li><a href="#">Афиша</a></li>
-    <li><a href="#">Справочник</a></li>
-    <li><a href="#">Объявления</a></li>
-	<li><a href="#">О портале</a></li>
-  </ul>
-</div>
+<?include "menu.php"?>
+
 <table class="content">
 	<tr>
 		<td class="content-left">
@@ -52,100 +44,16 @@
 				<a href="#">БЕРЕГ HONKA</a><br>
 				<a href="#">LAKE-SIDE</a><br>
 			</div>
-			<div class="content-header">
-				<span>ТОП Новостей</span>
-			</div>
-			<div class="small-news">
-				<div class="small-news-item">
-					<div class="item-date">02 Октября 2012</div>
-					<div class="item-header">Cтроительство газопровода до д. "Тимашово"!</div>
-					<div class="item-text">
-						Уважаемые клиенты поселка "Тимашево"! Рады сообщить 
-						<div style="text-align:right;"><a href="#">Читать далее &#9658&#9658&#9658</a></div>
-					</div>
-				</div>
-				<div class="small-news-item">
-					<div class="item-date">16 Марта 2012</div>
-					<div class="item-header">Офисы продаж в Боровске!</div>
-					<div class="item-text">
-						Уважаемые клиенты, сообщаем Вам, что с 19 марта работают следующие офисы продаж 
-						<div style="text-align:right;"><a href="#">Читать далее &#9658&#9658&#9658</a></div>
-					</div>
-				</div>
-				<div class="small-news-item-last">
-					<div class="item-date">19 Августа 2011</div>
-					<div class="item-header">Границу Москвы доведут до Калужской области!</div>
-					<div class="item-text">
-						По предварительным подсчетам, площадь территорий, 
-						<div style="text-align:right;"><a href="#">Читать далее &#9658&#9658&#9658</a></div>
-					</div>
-				</div>
-			</div>
+			<?include "topnews.php";?>
 			<div class="adv">
 				<img src="img/adv1.png" alt="Клубная карта">
 			</div>		
 		</td>
 		<td class="content-center">
 			
-		<?if (isset($article_section)) include "article_section.php";
-		else include $page_name.".php";?>
-			<div class="big-news">
-				<div class="big-news-item">
-					<img src="img/news-pic.png">
-					<div class="big-news-item-header">Очень важная новость - НЕ ИМЕЕТ ЗНАЧЕНИЯ ПРО ЧТО!!!...</div>
-					<div class="big-news-item-path"><a href="#">Новости</a> / <a href="#">Эконономика</a></div>
-					<div class="big-news-item-date">2012.12.03</div>
-					<div class="big-news-item-text">Аналитики Департамента загородной недвижимости компании Penny Lane Realty составили рейтинг коттеджных поселков, в которых по итогам 2010 года было реализовано максимальное количество домовладений.<div style="text-align:right;"><a href="#">Читать далее &#9658</a></div></div>					
-				</div>
-				<div class="big-news-item">
-					<img src="img/news-pic.png">
-					<div class="big-news-item-header">Очень важная новость - НЕ ИМЕЕТ ЗНАЧЕНИЯ ПРО ЧТО!!!...</div>
-					<div class="big-news-item-path"><a href="#">Новости</a> / <a href="#">Эконономика</a></div>
-					<div class="big-news-item-date">2012.12.03</div>
-					<div class="big-news-item-text">Аналитики Департамента загородной недвижимости компании Penny Lane Realty составили рейтинг коттеджных поселков, в которых по итогам 2010 года было реализовано максимальное количество домовладений.<div style="text-align:right;"><a href="#">Читать далее &#9658</a></div></div>					
-				</div>
-				<div class="big-news-item">
-					<img src="img/news-pic.png">
-					<div class="big-news-item-header">Очень важная новость - НЕ ИМЕЕТ ЗНАЧЕНИЯ ПРО ЧТО!!!...</div>
-					<div class="big-news-item-path"><a href="#">Новости</a> / <a href="#">Эконономика</a></div>
-					<div class="big-news-item-date">2012.12.03</div>
-					<div class="big-news-item-text">Аналитики Департамента загородной недвижимости компании Penny Lane Realty составили рейтинг коттеджных поселков, в которых по итогам 2010 года было реализовано максимальное количество домовладений.<div style="text-align:right;"><a href="#">Читать далее &#9658</a></div></div>					
-				</div>
-				<div class="big-news-item">
-					<img src="img/news-pic.png">
-					<div class="big-news-item-header">Очень важная новость - НЕ ИМЕЕТ ЗНАЧЕНИЯ ПРО ЧТО!!!...</div>
-					<div class="big-news-item-path"><a href="#">Новости</a> / <a href="#">Эконономика</a></div>
-					<div class="big-news-item-date">2012.12.03</div>
-					<div class="big-news-item-text">Аналитики Департамента загородной недвижимости компании Penny Lane Realty составили рейтинг коттеджных поселков, в которых по итогам 2010 года было реализовано максимальное количество домовладений.<div style="text-align:right;"><a href="#">Читать далее &#9658</a></div></div>					
-				</div>
-				<div class="big-news-item">
-					<img src="img/news-pic.png">
-					<div class="big-news-item-header">Очень важная новость - НЕ ИМЕЕТ ЗНАЧЕНИЯ ПРО ЧТО!!!...</div>
-					<div class="big-news-item-path"><a href="#">Новости</a> / <a href="#">Эконономика</a></div>
-					<div class="big-news-item-date">2012.12.03</div>
-					<div class="big-news-item-text">Аналитики Департамента загородной недвижимости компании Penny Lane Realty составили рейтинг коттеджных поселков, в которых по итогам 2010 года было реализовано максимальное количество домовладений.<div style="text-align:right;"><a href="#">Читать далее &#9658</a></div></div>					
-				</div>
-				<div class="big-news-item">
-					<img src="img/news-pic.png">
-					<div class="big-news-item-header">Очень важная новость - НЕ ИМЕЕТ ЗНАЧЕНИЯ ПРО ЧТО!!!...</div>
-					<div class="big-news-item-path"><a href="#">Новости</a> / <a href="#">Эконономика</a></div>
-					<div class="big-news-item-date">2012.12.03</div>
-					<div class="big-news-item-text">Аналитики Департамента загородной недвижимости компании Penny Lane Realty составили рейтинг коттеджных поселков, в которых по итогам 2010 года было реализовано максимальное количество домовладений.<div style="text-align:right;"><a href="#">Читать далее &#9658</a></div></div>					
-				</div>
-			</div>
-			<div class="big-news-nav">
-				<span>Страницы:</span>
-				<span><<</span>
-				<span><</span>
-				<span>1</span>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-				<a href="#">...</a>
-				<a href="#">></a>
-				<a href="#">>></a>
-			</div>
+			<?if (isset($article_section)) include "article_section.php";
+			else include $page_name.".php";?>
+			
 		</td>
 		<td class="content-right">
 			<div class="content-header">
@@ -183,35 +91,7 @@
 			<div class="adv">
 				<img src="img/adv3.png" alt="Сбербанк">
 			</div>
-			<div class="content-header">
-				<span>Последние комментарии</span>
-			</div>
-			<div class="last-comments">
-				<div class="last-comments-item">
-					<div class="item-date">02 Октября 2012</div>
-					<div class="item-header">Cтроительство газопровода до д. "Тимашово"!</div>
-					<div class="item-text">
-						Уважаемые клиенты поселка "Тимашево"! Рады сообщить 
-						<div style="text-align:right;"><a href="#">Перейти &#9658&#9658&#9658</a></div>
-					</div>
-				</div>
-				<div class="last-comments-item">
-					<div class="item-date">16 Марта 2012</div>
-					<div class="item-header">Офисы продаж в Боровске!</div>
-					<div class="item-text">
-						Уважаемые клиенты, сообщаем Вам, что с 19 марта работают следующие офисы продаж 
-						<div style="text-align:right;"><a href="#">Перейти &#9658&#9658&#9658</a></div>
-					</div>
-				</div>
-				<div class="last-comments-item-last">
-					<div class="item-date">19 Августа 2011</div>
-					<div class="item-header">Границу Москвы доведут до Калужской области!</div>
-					<div class="item-text">
-						По предварительным подсчетам, площадь территорий, 
-						<div style="text-align:right;"><a href="#">Перейти &#9658&#9658&#9658</a></div>
-					</div>
-				</div>				
-			</div>			
+					
 		</td>
 	</tr>
 </table>

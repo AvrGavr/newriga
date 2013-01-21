@@ -156,9 +156,30 @@ class Admin extends CI_Controller {
 		else {
 			$data['list'] = $this->DB_model->getData('cat');
 			$data['now_page'] = 'catlist';
+			$data['addcaturl'] = site_url('admin/add_cat');
 			$data['actionurl'] = site_url('admin/add_ads');
 			$this->load->view('adminform',$data);
 		}
+	}
+	
+	function add_cat() {
+		$this->load->helper('url');
+		$this->load->model('DB_model');
+		if (!empty($_POST['name'])) {
+			$this->db->set('name', $_POST['name']);
+			$this->db->insert('cat');
+			?>
+			<script>
+				document.location = "<?echo site_url("admin/add_ads")?>"
+			</script>
+			<?
+		}
+		$data['cssurl'] = site_url('css/admin.css');
+		
+		$data['now_page'] = 'add_cat';
+
+		$data['actionurl'] = site_url('admin/add_cat');
+		$this->load->view('adminform',$data);
 	}
 	
 	function delete($table) {

@@ -1,4 +1,4 @@
-<a href="#" style="text-decoration: underline">Добавить категорию...</a><br>
+<a href="<?echo $addcaturl?>" style="text-decoration: underline">Добавить категорию...</a><br>
 <form action="<?$actionurl?>" method="post">
 	<select size="6" name="cat"  >
 		
